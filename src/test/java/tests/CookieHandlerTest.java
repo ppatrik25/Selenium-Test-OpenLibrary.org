@@ -14,13 +14,16 @@ public class CookieHandlerTest extends TestSetup {
         // Remove the popup disabler cookie if exists
         cookieHandler.cookieRemover();
 
+        // Refresh the page to disable the cookie
+        cookieHandler.refreshPage();
+
         // Assert that the popup element appeared
         Assert.assertTrue("The popup element did not appear.", cookieHandler.getChildCount() > 0);
 
         // Add the popup disabler cookie
         cookieHandler.addPopupDisablerCookie();
 
-        // Refresh the page to activate the cookie
+        // Refresh the page to enable the cookie
         cookieHandler.refreshPage();
 
         // Assert that the popup element disappeared
