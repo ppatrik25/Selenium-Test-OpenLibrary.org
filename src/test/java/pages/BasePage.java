@@ -13,7 +13,7 @@ public class BasePage {
     
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, 1);
+        this.wait = new WebDriverWait(driver, 30);
     }
     
     // Function to wait for a WebElement to appear and return it

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AccountPage extends BasePage {
 
-    private By editButtonLocator = By.xpath("//a[contains(@href, 'm=edit')]");
+    private By editButtonLocator = By.xpath("//a[text() = 'Edit']");
     private By displayNameElement = By.xpath("//input[@name='displayname']");
     private By saveButtonLocator = By.xpath("//button[@name=\"_save\"]");
     private By textareaLocator = By.xpath("//textarea");

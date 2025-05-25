@@ -20,6 +20,9 @@ public abstract class TestSetup {
         driver = new RemoteWebDriver(new URL("http://selenium:4444/wd/hub"), options);
     }
 
+    // Function to log in the user
+    // Excessive use with the same account might result in a ban by the website
+    // In case of a banned account, register a new one and edit the config.properties file accordingly
     public void login() {
         try{
             LoginPage loginPage = new LoginPage(driver);

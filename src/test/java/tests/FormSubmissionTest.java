@@ -6,19 +6,25 @@ import org.junit.Test;
 
 public class FormSubmissionTest extends TestSetup {
 
+    String oldName;
+
     // Test for form submission and history
     @Test
     public void testEditDisplayName() {
-        AccountPage accountPage = new AccountPage(driver);
 
         // Log in to access tested functionality
         login();
+        
+        AccountPage accountPage = new AccountPage(driver);
 
         // Navigate to the account editing page 
         accountPage.clickEditButton();
 
+        // Save the old username for later comparison
+        oldName = accountPage.getDisplayname();
+
         // Type in the new username
-        accountPage.typeNewName("newName");
+        accountPage.typeNewName(accountPage.getDisplayname() + "!");
 
         // Save the new username
         accountPage.saveNewName();
@@ -27,6 +33,6 @@ public class FormSubmissionTest extends TestSetup {
         accountPage.goBack();
 
         // Assert that the new username is displayed for the account
-        Assert.assertEquals("Editing the display name was unsuccessful.", "newName", accountPage.getDisplayname());
+        Assert.assertEquals("Editing the display name was unsuccessful.", oldName + "!", accountPage.getDisplayname());
     }
 }

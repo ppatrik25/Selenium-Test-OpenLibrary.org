@@ -10,7 +10,7 @@ public class CookieHandler extends BasePage {
 
     public CookieHandler(WebDriver driver) {
         super(driver);
-        this.driver.get("https://openlibrary.org/account/import");
+        this.driver.get("https://openlibrary.org/");
         js = (JavascriptExecutor) driver;
     }    
 

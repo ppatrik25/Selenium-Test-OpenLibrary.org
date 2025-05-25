@@ -9,7 +9,7 @@ public class FileUploadHandler extends BasePage {
     private By uploadButtonLocator = By.name("csv");
     private By saveButtonLocator = By.xpath("//input[@value=\"Load Books\"]");
     private By importedFilesLocator = By.xpath("//table[@class=\"import-table\"]");
-    private String uploadFilePath = "/home/selenium/tests/big_assignment/src/test/resources/books_example.csv";;
+    private String uploadFilePath = "/home/selenium/tests/Selenium-Test-OpenLibrary.org/src/test/resources/books_example.csv";;
     private String isbnNumber = "545791421";;
     private WebElement uploadElement;
     private By isbnNumberLocator = By.xpath("//tr[@isbn='" + isbnNumber + "']");

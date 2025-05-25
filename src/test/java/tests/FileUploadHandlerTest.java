@@ -9,10 +9,11 @@ public class FileUploadHandlerTest extends TestSetup {
     // Test for file upload
     @Test
     public void testFileUpload() {
-        FileUploadHandler fileUploadHandler = new FileUploadHandler(driver);
 
         // Log in to access tested functionality
         login();
+        
+        FileUploadHandler fileUploadHandler = new FileUploadHandler(driver);
 
         // Pass the file path to the input element
         fileUploadHandler.selectFileByPath();

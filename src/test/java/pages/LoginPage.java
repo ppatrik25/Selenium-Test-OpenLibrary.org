@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage extends BasePage {
     
     private Properties properties = new Properties();
-    private String configFilePath = "/home/selenium/tests/big_assignment/src/test/resources/config.properties";;
+    private String configFilePath = "/home/selenium/tests/Selenium-Test-OpenLibrary.org/src/test/resources/config.properties";;
     private By usernameLocator = By.id("username");
     private By passwordLocator = By.id("password");
     private By loginButton = By.xpath("//button[@class='cta-btn cta-btn--primary']");
@@ -55,6 +55,6 @@ public class LoginPage extends BasePage {
     
     // Function to check if the login was successful
     public Boolean loginSuccess() {
-        return waitVisibiiltyAndFindElement(By.xpath("//a[text() = 'Log In']")).isDisplayed();
+        return waitVisibiiltyAndFindElement(By.xpath("//img[@class=\"account__icon\"]")).isDisplayed();
     }
 }

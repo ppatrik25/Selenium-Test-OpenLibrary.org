@@ -9,10 +9,11 @@ public class FillTextareaTest extends TestSetup {
     // Test for filling text area
     @Test
     public void testFillTextarea() {
-        AccountPage accountPage = new AccountPage(driver);
 
         // Log in to access tested functionality
         login();
+
+        AccountPage accountPage = new AccountPage(driver);
 
         // Navigate to the account editing page 
         accountPage.clickEditButton();
